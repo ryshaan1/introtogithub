@@ -1,0 +1,42 @@
+COURSERA GIT & GITHUB TASK GUIDE
+
+IMPORTANT:
+- These files are a starter pack for the repository file tasks. Add them to YOUR public fork/repository, then submit the URLs from GitHub.
+- Do not submit invented terminal output for Tasks 6–9. Run the commands in the actual course lab/repository and copy the real output.
+- Keep the exact filenames requested by the course: README.md, LICENSE, CODE_OF_CONDUCT (or CODE_OF_CONDUCT.md if the course accepts the .md extension), CONTRIBUTING.md, simple-interest.sh, forked-repo, merge_branches, bug-fix-revert, github-branches.
+
+PART 1 — FILE URLS
+1. Open your public GitHub repository.
+2. Upload/add README.md, LICENSE, CODE_OF_CONDUCT.md, CONTRIBUTING.md, and simple-interest.sh.
+3. Commit the files to the repository.
+4. Open each file in GitHub and copy its browser URL. Typical URL format:
+   https://github.com/YOUR-USERNAME/YOUR-REPOSITORY/blob/main/README.md
+   Replace YOUR-USERNAME and YOUR-REPOSITORY with your real values.
+5. For Task 3, if the rubric insists on the exact filename CODE_OF_CONDUCT (no extension), rename CODE_OF_CONDUCT.md to CODE_OF_CONDUCT before committing. Many GitHub projects use CODE_OF_CONDUCT.md, but follow the grader's filename rule.
+
+PART 2 — GIT CLI OUTPUT FILES
+Use the course lab's actual cloned/forked repository folder. In Git Bash or a terminal, save the exact command and output to the required file, then inspect it before uploading/submitting.
+
+Task 6 — forked-repo
+The course asks for the curl command and its terminal output that proves your fork exists. The exact API URL depends on the course lab instructions and your GitHub username. Use the curl command given by the lab; do not guess the repository owner or token. If the lab asks for GitHub's API, the general public endpoint pattern is:
+curl -L -s https://api.github.com/repos/YOUR-USERNAME/mcino-Introduction-to-Git-and-GitHub
+Save the command and output to a file named forked-repo. Verify the JSON identifies your repository and its parent as ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub. If the course specifically requires a different curl endpoint/format, use that exact command instead.
+
+Task 7 — merge_branches
+In the repository where the bug-fix-typo branch exists, run:
+git checkout main
+git merge bug-fix-typo
+Copy the command and full terminal output into a text file named merge_branches. The output should clearly include a summary like "1 file changed" (the exact insertions/deletions depend on the actual repository state). If it says the branch is unknown or already merged, stop and inspect the course steps instead of fabricating the output.
+
+Task 8 — bug-fix-revert
+Use the exact curl command from the course lab that queries/verifies the pull request. It should return the PR details and identify the fork/head repository. Do not use a made-up PR number. Find the actual PR number and endpoint in your lab/repository. Save the command and its real output to a file named bug-fix-revert. Confirm the JSON shows the expected pull request and forked repository (often in head.repo.full_name).
+
+Task 9 — github-branches
+Run:
+git branch -avv
+Copy the command and terminal output into a text file named github-branches. This lists local and remote-tracking branches and their tracking/status information. If the rubric expects a different command, use the one specified by the lab.
+
+WINDOWS NOTES
+- Git Bash is usually easiest for these tasks.
+- In PowerShell, use Out-File only if the course instructions allow it; preserve the full output and the exact command.
+- Before submission, open each output file and confirm it contains the actual terminal output, not just the command.
